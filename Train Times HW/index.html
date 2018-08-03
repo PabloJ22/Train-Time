@@ -6,28 +6,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Train Times</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
-    <script src="javascript/script.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase-app.js"></script> -->
+
+    <!-- <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script> -->
+
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <!-- <script src="javascript/script.js"></script> -->
+
 </head>
 
 <body>
-    <div>
+    <!-- <div>
         <br>
         <h1>Add a Train below</h1>
         <br>
 
         <form>
             Train Name:
-            <input type="text" name="TrainName">
+            <input type="text" name="trainName">
             <br>
             <br> Destination:
-            <input type="text" name="Destination">
+            <input type="text" name="destination">
             <br>
-            <br>First Train Time:
-            <input type="text" name="TrainTime1">
+            <br>First Train Time (in military time):
+            <input type="text" name="trainTime1">
             <br>
-            <br> Frequency:
-            <input type="text" name="Frequency">
+            <br> Frequency (in minutes):
+            <input type="text" name="frequency">
             <br>
             <br>
             <input type="submit">
@@ -37,15 +45,85 @@
     <table>
         <tr>
             <th>Train Name</th>
+
             <th>Destination</th>
+
             <th>Frequency (min)</th>
             <th>Next Arrival</th>
             <th>Minutes Away</th>
         </tr>
-        <tbody>
+
+        <tbody id="tBody">
 
         </tbody>
-    </table>
+    </table> -->
+
+
+
+
+    <div class="container">
+
+        <!-- Jumbotron -->
+        <div class="jumbotron">
+            <h1 class="text-center">chugga chugga chuu chuuu!</h1>
+        </div>
+
+        <div class="row">
+
+            <!-- Sign-Up Card-->
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-heading">
+                        <h3 class="card-title">New Train Time</h3>
+                    </div>
+
+                    <div class="card-body">
+
+                        <form role="form">
+                            <div class="form-group row">
+                                <label for="trainName">Train Name:</label>
+                                <input class="form-control" id="trainName" type="text">
+                            </div>
+                            <div class="form-group row">
+                                <label for="destination">Destination:</label>
+                                <input class="form-control" id="destination" type="text">
+                            </div>
+                            <div class="form-group row">
+                                <label for="trainTime1">First Train Time (in military time):</label>
+                                <input class="form-control" id="trainTime1" type="text">
+                            </div>
+                            <div class="form-group row">
+                                <label for="frequency">Frequency (in minutes)</label>
+                                <input class="form-control" id="frequency" type="text">
+                            </div>
+                            <button class="btn btn-default" id="add-user" type="submit">Submit</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Most Recent Member Card -->
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-heading">
+                        <h3 class="text-center">Train Times</h3>
+                    </div>
+                    <div class="card-body" id="recent-member">
+                        <h2 id="name-display"></h2>
+                        <h4 id="destination-display"></h4>
+                        <h4 id="time-display"></h4>
+                        <p id="frequency-display"></p>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+            <script src="javascript/script.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
 
 
 
@@ -54,12 +132,6 @@
 
 
 
-
-
-    <script src="https://code.jquery.com/jquery.js"></script>
-
-
-    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
 
 
