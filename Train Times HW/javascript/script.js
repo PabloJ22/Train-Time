@@ -31,16 +31,6 @@
 
 // var dataRef = firebase.database();
 $(document).ready(function () {
-
-    var config = {
-        apiKey: "AIzaSyA_9MDlgiXIjBwRBxavrOWDSjMkmQSMQH0",
-        authDomain: "train-time-257cc.firebaseapp.com",
-        databaseURL: "https://train-time-257cc.firebaseio.com",
-        projectId: "train-time-257cc",
-        storageBucket: "train-time-257cc.appspot.com",
-        messagingSenderId: "196553447860"
-    };
-    firebase.initializeApp(config);
     // var dataRef = firebase.database();
 
 

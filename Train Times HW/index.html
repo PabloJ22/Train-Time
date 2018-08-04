@@ -13,6 +13,7 @@
 
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <!-- <script src="javascript/script.js"></script> -->
 
@@ -122,8 +123,19 @@
 
 
 
-            <script src="javascript/script.js"></script>
             <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+            <script>
+                var config = {
+                    apiKey: "AIzaSyA_9MDlgiXIjBwRBxavrOWDSjMkmQSMQH0",
+                    authDomain: "train-time-257cc.firebaseapp.com",
+                    databaseURL: "https://train-time-257cc.firebaseio.com",
+                    projectId: "train-time-257cc",
+                    storageBucket: "train-time-257cc.appspot.com",
+                    messagingSenderId: "196553447860"
+                };
+                firebase.initializeApp(config);
+            </script>
+            <script src="javascript/script.js"></script>
 
 
 
