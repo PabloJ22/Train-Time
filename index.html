@@ -7,69 +7,22 @@
     <title>Train Times</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <!-- <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase-app.js"></script> -->
-
-    <!-- <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script> -->
-
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
-
 </head>
 
 <body>
-    <!-- <div>
-        <br>
-        <h1>Add a Train below</h1>
-        <br>
-
-        <form>
-            Train Name:
-            <input type="text" name="trainName">
-            <br>
-            <br> Destination:
-            <input type="text" name="destination">
-            <br>
-            <br>First Train Time (in military time):
-            <input type="text" name="trainTime1">
-            <br>
-            <br> Frequency (in minutes):
-            <input type="text" name="frequency">
-            <br>
-            <br>
-            <input type="submit">
-        </form>
-    </div>
-
-    <table>
-        <tr>
-            <th>Train Name</th>
-
-            <th>Destination</th>
-
-            <th>Frequency (min)</th>
-            <th>Next Arrival</th>
-            <th>Minutes Away</th>
-        </tr>
-
-        <tbody id="tBody">
-
-        </tbody>
-    </table> -->
-
-
-
 
     <div class="container">
 
         <!-- Jumbotron -->
         <div class="jumbotron">
             <h1 class="text-center">chugga chugga chuu chuuu!</h1>
+            <hr>
+            <h5 class="text-center">Schedule new train times by filling out the form below.</h5>
         </div>
 
         <div class="row">
-
-            <!-- Sign-Up Card-->
+            <!-- New Train input form-->
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-heading">
@@ -77,32 +30,30 @@
                     </div>
 
                     <div class="card-body">
-
                         <form role="form">
                             <div class="form-group row">
                                 <label for="trainName">Train Name:</label>
-                                <input class="form-control" id="trainName" type="text">
+                                <input class="form-control" id="trainNameInput" type="text">
                             </div>
                             <div class="form-group row">
                                 <label for="destination">Destination:</label>
-                                <input class="form-control" id="destination" type="text">
+                                <input class="form-control" id="destinationInput" type="text">
                             </div>
                             <div class="form-group row">
-                                <label for="trainTime1">First Train Time (in military time):</label>
-                                <input class="form-control" id="trainTime1" type="text">
+                                <label for="trainTime1">First Train Time (HH:mm - Military time):</label>
+                                <input class="form-control" id="trainTime1Input" type="text">
                             </div>
                             <div class="form-group row">
-                                <label for="frequency">Frequency (in minutes)</label>
-                                <input class="form-control" id="frequency" type="text">
+                                <label for="frequency">Frequency (in minutes):</label>
+                                <input class="form-control" id="frequencyInput" type="text">
                             </div>
-                            <button class="btn btn-default" id="add-user" type="submit">Submit</button>
+                            <button class="btn btn-default" id="addTrainBtn" type="submit">Submit</button>
                         </form>
-
                     </div>
                 </div>
             </div>
 
-            <!-- Most Recent Member Card -->
+            <!-- Most recent train added -->
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-heading">
@@ -119,58 +70,20 @@
                                     <th>Minutes Away</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tBody>
                                 <!-- to be populated using jQuery-->
-                            </tbody>
+                            </tBody>
                         </table>
-                        <!--                         
-                        <h2 id="name-display"></h2>
-                        <h4 id="destination-display"></h4>
-                        <h4 id="time-display"></h4>
-                        <p id="frequency-display"></p> -->
                     </div>
                 </div>
-
             </div>
 
-
+            <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
             <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
                 crossorigin="anonymous"></script>
             <script src="assets/javascript/app.js"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
                 crossorigin="anonymous"></script>
-
-
-
-            <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
-            <script>
-                var config = {
-                    apiKey: "AIzaSyBBRSx6K8ZCFb5eCPQFZxdDVYipDufeNkk",
-                    authDomain: "train-final-test.firebaseapp.com",
-                    databaseURL: "https://train-final-test.firebaseio.com",
-                    projectId: "train-final-test",
-                    storageBucket: "",
-                    messagingSenderId: "61105354510"
-                };
-                firebase.initializeApp(config);
-            </script>
-            <script src="javascript/script.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
