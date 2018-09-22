@@ -14,7 +14,7 @@
 //         event.preventDefault();
 //         var trainNme = $("#trainName").val();
 
-//         console.log("1st" + trainNme);
+//         console.log("1st" + trainNme); 
 
 //         trainNombre = $("#trainName").val();
 //         $("#tBody").text("<tr><td>" + trainNme + "</tr></td>");
@@ -42,13 +42,19 @@ $(document).ready(function () {
 
     // Capture Button Click
     $("#submit").on("click", function (event) {
+        console.log(event);
         event.preventDefault();
+        console.log(event);
 
 
         trainName = $("#trainName").val().trim();
+        console.log(trainName);
+
         destination = $("#destination").val().trim();
         trainTime = $("#trainTime1").val().trim();
         frequency = $("#frequency").val().trim();
+
+        // console.log(trainName);
 
         // Code for the push
         firebase.database().ref().push({
