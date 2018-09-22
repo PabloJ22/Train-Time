@@ -14,8 +14,6 @@
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <!-- <script src="javascript/script.js"></script> -->
 
 </head>
 
@@ -108,18 +106,39 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-heading">
-                        <h3 class="text-center">Train Times</h3>
+                        <h3 class="text-center">Current Train Schedule</h3>
                     </div>
-                    <div class="card-body" id="recent-member">
+                    <div class="card-body" id="trainTableDiv">
+                        <table class="table" id="trainTable">
+                            <thead>
+                                <tr>
+                                    <th>Train Name</th>
+                                    <th>Destination</th>
+                                    <th>Frequency (min)</th>
+                                    <th>Next Arrival</th>
+                                    <th>Minutes Away</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- to be populated using jQuery-->
+                            </tbody>
+                        </table>
+                        <!--                         
                         <h2 id="name-display"></h2>
                         <h4 id="destination-display"></h4>
                         <h4 id="time-display"></h4>
-                        <p id="frequency-display"></p>
+                        <p id="frequency-display"></p> -->
                     </div>
                 </div>
 
             </div>
 
+
+            <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+                crossorigin="anonymous"></script>
+            <script src="assets/javascript/app.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+                crossorigin="anonymous"></script>
 
 
 
